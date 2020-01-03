@@ -1,0 +1,24 @@
+﻿<p class="btn-danger">@ViewBag.error</p>
+<form method="post">
+    <div class="form-group">
+        <label for="name">UserName</label>
+        <input class="form-control" type="text" name="username" id="name" value="@ViewBag.UserName"/>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" id="email"value="@ViewBag.Email"  />
+    </div>
+    </br>
+    <div class="form-group">
+        <label for="pasw">Password</label>
+        <input class="form-control" type="password" name="password" id="pasw" title="The Length of the password must be gerter than 5" />
+    </div>
+    </br>
+    <div class="form-group">
+        <label for="conf">Verfiy</label>
+        <input class="form-control" type="password" name="verify" id="conf" />
+    </div>
+    </br>
+    <input type="submit" value="SignUp" />
+</form>
