@@ -42,11 +42,21 @@ namespace UserSignup.Controllers
                     Email = addUserViewModel.Email,
                     Password = addUserViewModel.Password
                 };
-                return Redirect("Index?useName=" + user1.UserName);
+                return Redirect("Index?userName=" + user1.UserName);
 
 
             }
             return View(addUserViewModel);
+
+
+            /*User user1 = new User()s
+            {
+                UserName = addUserViewModel.UserName,
+                Email = addUserViewModel.Email,
+                Password = addUserViewModel.Password
+            };
+            return Redirect("Index?userName=" + user1.UserName);*/
+
         }
     }
 }
