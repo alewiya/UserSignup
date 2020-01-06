@@ -1,23 +1,27 @@
-﻿<p class="btn-danger">@ViewBag.error</p>
+﻿@model UserSignup.ViewModels.AddUserViewModel
 <form method="post">
     <div class="form-group">
-        <label for="name">UserName</label>
-        <input class="form-control" type="text" name="username" id="name" value="@ViewBag.UserName"/>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName"class="form-control"/>
+        <span asp-validation-for="UserName"></span>
     </div>
     <br />
     <div class="form-group">
-        <label for="email">Email</label>
-        <input class="form-control" type="text" name="email" id="email"value="@ViewBag.Email"  />
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
     </div>
     </br>
     <div class="form-group">
-        <label for="pasw">Password</label>
-        <input class="form-control" type="password" name="password" id="pasw" title="The Length of the password must be gerter than 5" />
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control"type="password" />
+        <span asp-validation-for="Password" ></span>
     </div>
     </br>
     <div class="form-group">
-        <label for="conf">Verfiy</label>
-        <input class="form-control" type="password" name="verify" id="conf" />
+        <label asp-for="Verfiy"></label>
+        <input asp-for="Verfiy" class="form-control" type="password" />
+        <span asp-validation-for="Verfiy"></span>
     </div>
     </br>
     <input type="submit" value="SignUp" />
